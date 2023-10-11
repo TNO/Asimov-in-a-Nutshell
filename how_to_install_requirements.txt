@@ -1,0 +1,8 @@
+# create a conda environment with the specified name and python version 3.10.
+conda create -n <ENV_NAME> python=3.10
+
+# activate the created environment
+conda activate <ENV_NAME>
+
+# install the necessary libraries with pip utilising the requirements.txt file in the repo.
+pip install -r requirements.txt
