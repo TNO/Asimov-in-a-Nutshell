@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/ckitsanelis/Nutshell_Test/blob/45f19859dc8c324d0b5cbc9833b3081d068d372e/asimov-logo.png" width="500px"/>
+	<img src="https://github.com/TNO/Asimov-in-a-Nutshell/blob/21ec05bb9a888dd6f4c1c580876bf38e9c206d2d/asimov-logo.png" width="500px"/>
 </p>
 
 [Website](https://asimov-project.eu) | [Publications](https://itea4.org/project/asimov.html)
@@ -17,7 +17,7 @@ The demonstrator optimizes a noisifier system that produces images with two type
 The experimental set-up for the ASIMOV-in-a-Nutshell demonstrator is summarized in the below figure. We use rectangles to represent processing steps and ovals to represent data artifacts. The processing steps are grouped using dashed lines to indicate modules that conform to the ASIMOV reference architecture.
 
 <p align="center">
-	<img src="https://github.com/ckitsanelis/Nutshell_Test/blob/b23c77eccc3ce20cb291a6029ce0a614ad4486bb/demonstrator-setup.png" width="500px"/>
+	<img src="https://github.com/TNO/Asimov-in-a-Nutshell/blob/21ec05bb9a888dd6f4c1c580876bf38e9c206d2d/demonstrator-setup.png" width="500px"/>
 </p>
 
 The blue elements are directly related to the image noisifier. Its output is a noisy image, and its inputs are the collection of base images and the applied noise levels. When all applied noise levels are set to 0, the noisy image is identical to the base image.
