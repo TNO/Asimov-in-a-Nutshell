@@ -42,7 +42,7 @@ def evaluate(config):
         config["rl"]["max_variance_multiplier"] = multiplier
 
         env = TupleDictWrapper(gym.make("EnvAsimov1D-v1", **config))
-        model = stable_baselines3.SAC.load(model_path + ".zip")
+        model = stable_baselines3.SAC.load(model_path)
         rewards, lengths = stable_baselines3.common.evaluation.evaluate_policy(model, env, deterministic=False, n_eval_episodes=config["rl"]["evaluation_episodes"], return_episode_rewards=True)
         pandas.DataFrame(rewards).to_csv(log_path + "/evaluate_rewards_" + str(multiplier) + ".csv", header=False, index=False)
         pandas.DataFrame(lengths).to_csv(log_path + "/evaluate_lengths_" + str(multiplier) + ".csv", header=False, index=False)
@@ -52,7 +52,7 @@ def evaluate(config):
 def apply(config):
     env = TupleDictWrapper(gym.make("EnvAsimov1D-v1", **config))
     env.unwrapped.enable_visualizations()
-    model = stable_baselines3.SAC.load(model_path + ".zip")
+    model = stable_baselines3.SAC.load(model_path)
 
     while True:
         steps = 0

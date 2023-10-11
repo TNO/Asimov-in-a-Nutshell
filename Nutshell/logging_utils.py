@@ -8,7 +8,7 @@ def extract_path(config, noise_type, model_path=False, log_path=False):
     output_path = os.path.join(config["rl"]["storage_dir"], noise_type, config["data"]["colormode"])
     output_path = os.path.join(output_path, "relative") if config["rl"]["relative_actions"] else os.path.join(output_path, "absolute")
     if model_path:
-        return os.path.join(output_path, config["rl"]["algorithm"])
+        return os.path.join(output_path, config["rl"]["algorithm"], "model")
     elif log_path:
         return os.path.join(output_path, config["rl"]["algorithm"], "logs")
     else:
