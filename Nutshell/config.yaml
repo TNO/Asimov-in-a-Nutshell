@@ -1,0 +1,35 @@
+data: 
+  original_dir: ...\data
+  colormode: grayscale
+  shape:
+    height: 224
+    width: 224
+noise:
+  settings:
+    gaussian:
+      max_variance: 2.0
+      num_of_variances: 11
+      done_threshold: 0.25
+    blur:
+      max_variance: 10.0
+      num_of_variances: 11
+      done_threshold: 1.0
+sl:
+  model: lenet
+  epochs: 25
+  evaluate_iterations: 100
+  evaluate_average_count: 1
+  storage_dir: ...
+rl:
+  algorithm: SAC
+  min_variance_multiplier: 1.0
+  max_variance_multiplier: 1.0
+  done_count_threshold: 1
+  train_done_count_threshold: 3
+  relative_actions: True
+  observation_delta_length: 1
+  evaluate_average_count: 1
+  total_timesteps: 100000
+  log_interval: 1000
+  evaluation_episodes: 1000
+  storage_dir: ...
